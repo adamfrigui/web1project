@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB1</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/22b5f1a5be.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="lightslider.css" />
+    <script src="JQuery3.3.1.js"></script>
+    <script src="lightslider.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="navleft">
+        <nav>
+          <div id="MenuItemss" class="navlist">
+            <a href="index.html" class="navlink boldy">Home</a>
+            <a href="haha.html" class="navlink boldy">Products </a>
+            <a href="carta.html" class="navlink boldy">Cart</a>
+          </div>
+        </nav>
+      </div>
+      <div class="navright">
+        <div class="navlist">
+          <a class="navlink navlink--btn boldy" href="login.html">Login</a>
+
+          <a
+            class="navlink navlink--btn navlink--btn--highlight boldy"
+            href="login.html"
+            >Join</a
+          >
+        </div>
+      </div>
+      <div onclick="menutoggle()" class="droppy">
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="home-intro">
+        <h1>
+          Welcome to :<br />
+          the one and only :)
+        </h1>
+      </section>
+
+      <div class="home-about">
+        <h2>About us</h2>
+        <p>
+          Guitar Center is home to the worlds largest selection of popular
+          guitars, basses, amplifiers, keyboards, workstations, drums,
+          percussion, microphones, PA systems, DJ equipment, stage lighting,
+          recording software, studio gear and more. Backed by over 260 stores
+          across the country, GuitarCenter.com offers the fastest, easiest way
+          to find all the gear you need in one place. And, while many popular
+          instruments are available for same-day pickup at a store near you, we
+          also offer free shipping on thousands of items to the Guitar Center
+          location of your choice.
+        </p>
+        <div class="columns">
+          <div class="col fade-in">
+            <p>
+              Because of our incredible buying power and strong relationships
+              with all the top musical instrument brands, you’re sure to find
+              all the best gear at the guaranteed lowest price. From the all new
+              Gibson USA 2016 updates to the largest collection of Strats, we’ve
+              got everything a guitarist could ask for, not to mention our vast
+              collection of effects pedals and accessories.
+            </p>
+          </div>
+          <div class="col fade-in">
+            <p>
+              Drummers need look no further for the biggest selection of the
+              best drum gear, including acoustic drum sets, electronic drum
+              sets, hand drums, cymbals and sticks. And for the independent
+              recording artist, check out Avid Pro Tools, PreSonus StudioLive,
+              Epix Bundle 10, and Komplete 10 - plus our live sound products,
+              from mixers to monitors and more, will suit the needs of any
+              gigging musician.
+            </p>
+          </div>
+          <div class="col fade-in">
+            <p>
+              Don’t know how to play and want to get started? It’s easy with
+              Guitar Centers enormous assortment of books & media. And players
+              of all skill levels can attend our free Workshops Series and
+              Recording Made Easy classes every week. Are you a longtime
+              guitarist looking for something especially unique? Check out our
+              platinum instruments and vintage gear online, or in-person at your
+              local GC store. From the Gibson Les Paul to the Fender
+              Stratocasters, we’ve got you covered. We even offer a wide array
+              of band & orchestra instruments and accessories at
+              GuitarCenter.com.
+            </p>
+          </div>
+          <div class="col fade-in">
+            <p>
+              Looking for extra help with recording your music? GC has partnered
+              with the experts at Studio Automatic to offer online recording
+              studio services. They can take your song idea and turn it into a
+              fully produced song in 5-7 business days. Visit our Studio
+              Automatic page to learn more about the service, the process, and
+              listen to some samples.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contain">
+        <ul id="autoWidth" class="cs-hidden">
+          <li class="item-a">
+            <div class="box">
+              <p class="product"><b>Electrifying E-Kits</b></p>
+              <img
+                src="img/mf-md-rhhs-drumsaccessories-02-28-21.webp"
+                class="model imgmodif"
+              />
+            </div>
+          </li>
+          <li class="item-a">
+            <div class="box">
+              <p class="product">
+                <b>No place like home studio </b>
+              </p>
+              <img
+                src="img/mf-md-rhhs-no-place-like-home-02-17-21.jpg"
+                class="model imgmodif"
+              />
+            </div>
+          </li>
+          <li class="item-a">
+            <div class="box">
+              <p class="product"><b> Discounts </b></p>
+              <img
+                src="img/mf-md-rhhs-24-month-financing-02-28-21.jpg"
+                class="model imgmodif"
+              />
+            </div>
+          </li>
+          <li class="item-a">
+            <div class="box">
+              <p class="product"><b> Celebrate All Things Martin </b></p>
+              <img
+                src="img/mf-md-rhhs-martin-event-02-17-21.webp"
+                class="model imgmodif"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <br />
+    <br />
+    <form action="" method="post">
+      <label for="name" class="nahbruh"
+        ><b
+          >Be the first to know about exclusive offers, tips and more.</b
+        ></label
+      ><br />
+      <div class="row">
+        <input
+          id="name"
+          type="email"
+          name="Name"
+          placeholder="Enter Email Address (Required):"
+          required
+        /><br />
+
+        <div>
+          <input class="sign-in-btn nony" type="submit" value="Sign Up" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="invalidCheck"
+            required
+          />
+          <label class="form-check-label" for="invalidCheck">
+            Yes, I would like to receive emails with news and offers from Guitar
+            Center.
+          </label>
+        </div>
+      </div>
+    </form>
+    <br /><br />
+    <br />
+    <footer>
+      <div class="footer-content">
+        <h3>Contact With Us</h3>
+        <p>you can follow us and support us through the links down below</p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          copyright &copy;2021 Guitar Center, Inc. designed by
+          <span>adem frigui</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

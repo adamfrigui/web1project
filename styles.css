@@ -1,0 +1,473 @@
+body {
+  margin: 0;
+  font-family: Montserrat;
+}
+
+header {
+  --text: #f4f4f4 !important;
+  --text-inverse: #333 !important;
+  --background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2em 3em;
+  transition: background 250ms ease-in;
+  background: var(--background) !important;
+  color: var(--text) !important;
+}
+
+.navlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navlink {
+  --spacing: 1em;
+  text-decoration: none !important;
+  color: inherit;
+  display: inline-block;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.navlink:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing);
+  right: var(--spacing);
+  height: 2px;
+  background: currentColor !important;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: -webkit-transform 150ms ease-in-out !important;
+  transition: transform 150ms ease-in-out !important;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out !important;
+}
+
+.navlink:hover::after {
+  -webkit-transform: scaleX(1) !important;
+  transform: scaleX(1) !important;
+}
+
+.navlink--btn {
+  border: 1.5px solid currentColor !important;
+  border-radius: 2em;
+  margin-left: 1em;
+  transition: background 250ms ease-in-out;
+  letter-spacing: 1px;
+  padding: 0.75em 1.5em;
+}
+
+.navlink--btn:hover {
+  background: var(--text) !important;
+  color: var(--text-inverse) !important;
+  border-color: var(--text) !important;
+}
+
+.navlink--btn::after {
+  display: none;
+}
+
+.navlink--btn--highlight {
+  background: limegreen;
+  border-color: limegreen;
+  color: #333;
+}
+
+.navlink--btn--highlight:hover {
+  background: var(--text) !important;
+  border-color: var(--text) !important;
+}
+
+.nav-scrolled {
+  --text: #333 !important;
+  --text-inverse: #f4f4f4 !important;
+  --background: #f4f4f4 !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-intro {
+  padding: 50vh 0;
+  background: #123 url(Guitar-History-How-the-Guitar-has-Evolved.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white !important;
+  text-align: center;
+}
+
+.home-about {
+  padding: 4em 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.columns {
+  display: flex;
+}
+
+.col + .col {
+  margin-left: 1.5em;
+}
+
+.from-left {
+  grid-column: 2 / 3;
+}
+
+.from-right {
+  grid-column: 3 / 4;
+}
+
+.boldy {
+  font-weight: bold;
+}
+
+.contain {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(17, 34, 51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.box {
+  width: 828px;
+  height: 610px;
+  background-color: #1e1e26;
+  border-radius: 10px;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+.model {
+  max-height: 100%;
+  max-width: 100%;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 828px;
+}
+.details p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: #6a6a74;
+  text-align: center;
+  margin-top: 20px;
+}
+.product {
+  margin-top: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: Montserrat;
+  font-size: 15px;
+}
+
+.box:hover {
+  background-color: #17171d;
+  transform-style: preserve-3d;
+  transform: scale(1.02);
+  transition: all ease 0.3s;
+}
+.box:hover .product {
+  color: #c0292b;
+  transition: all ease 0.5s;
+}
+
+@media (max-width: 720px) {
+  .box {
+    width: 94%;
+    height: 300px;
+  }
+  .model {
+    height: 200px;
+  }
+  .details p {
+    font-size: 16px;
+    width: 250px;
+  }
+}
+
+#email {
+  width: 30%;
+}
+.hello {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  margin-left: 10px;
+}
+label {
+  display: flex;
+  justify-content: center;
+}
+.custom-checkbox {
+  display: flex;
+  justify-content: center;
+}
+.form-row {
+  display: flex;
+  justify-content: center;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+.nopers {
+  display: flex;
+  justify-content: center;
+}
+.yep {
+  width: 20%;
+  margin-left: 10px;
+}
+.form-control {
+  width: 60%;
+}
+.navlink {
+  text-decoration: none;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin-right: 0;
+}
+
+input[type="text"],
+select {
+  width: 550px;
+  height: 100px;
+  margin: 10px 15px 50px;
+  border: 3px solid rgb(17, 34, 51);
+  border-radius: 50px;
+  outline: none;
+  font-family: sofia-pro-soft, sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+  text-align-last: center;
+}
+
+#name {
+  font-family: sofia-pro-soft, sans-serif;
+
+  font-weight: 300;
+  font-size: 20px;
+  color: #555;
+  margin-left: 30px;
+  width: 400px;
+  height: 30px;
+}
+
+input.sign-in-btn {
+  width: 150px;
+  height: 40px;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  outline: none;
+  font-family: sofia-pro-soft, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
+  background: rgb(17, 34, 51);
+  margin-left: 30px;
+}
+
+.sign-in-btn:active {
+  transition: 0.3s;
+  color: rgb(17, 34, 51);
+  background-color: #fff;
+  border: 3px solid rgb(17, 34, 51);
+}
+
+@media screen and (max-width: 767px) {
+  input[type="text"] {
+    width: 100%;
+    display: inline-block;
+  }
+}
+.nony {
+  cursor: pointer;
+}
+
+.nahbruh {
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+}
+footer {
+  background: rgb(17, 34, 51);
+  height: auto;
+  width: 99.1vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 40px;
+  color: #fff;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+.socials a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+.socials a:hover i {
+  color: aqua;
+}
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.5);
+  width: 99.1vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
+.imgmodif {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(35, 80, 148);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  display: none;
+}
+.navright {
+  margin-left: 30%;
+}
+
+.account {
+  margin-top: 20px;
+}
+
+/*----media query for menu----*/
+
+@media only screen and (max-width: 900px) {
+  .navleft nav .navlist {
+    position: absolute;
+    display: block;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    margin-top: 5%;
+    overflow: hidden;
+    transition: 0.2s;
+    display: none;
+  }
+  .navleft nav .navlist a {
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10px;
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    display: block;
+  }
+  .navright {
+    display: flex;
+    justify-content: start;
+    margin-left: 0%;
+  }
+}
+.navleft nav div a {
+  padding-bottom: 30px;
+}
+
+.navleft nav #MenuItemss a {
+  padding-bottom: 10px;
+}
+.Rednav {
+  color: #c0292b;
+}
